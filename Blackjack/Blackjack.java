@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class Blackjack {
 
 	public static void main(String[] args) {
-		boolean playing  = false;
-		Card card = new Card();
-		card.getRandomCard();
-		System.out.println(card.getValue());
+		Deck deck = new Deck();
+		deck.buildDeck();
+		deck.shuffleDeck();
+		deck.shuffleDeck();
+		deck.printDeck();
+		
 		
 		
 		

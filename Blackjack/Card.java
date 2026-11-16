@@ -3,13 +3,15 @@ import java.util.Random;
 
 public class Card {
 	
-	String color;
-	String suit;
-	int value;
+	private String rank;
+	private String color;
+	private String suit;
+	private int value;
 	
 	public Card (){}
 	
-	public Card (int value, String suit, String color) {
+	public Card (int value, String suit, String color, String rank) {
+		this.rank = rank;
 		this.color = color;
 		this.suit=suit;
 		this.value = value;
@@ -24,25 +26,11 @@ public class Card {
 	public String getColor() {
 		return this.color;
 	}
-	public Card getRandomCard () {
-		Random rand = new Random();
-		int value = rand.nextInt(10)+1;
-		String color;
-		String suit;
-	
-		String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
-	
-		int randIndex = rand.nextInt(4);
-		suit = suits[randIndex];
-	
-		if (suit.equals("Diamonds") || suit.equals("Hearts")) {
-			color = "Red";
-		}else {
-			color = "Black";
-		}
-	
-		Card card = new Card(value, suit, color);
-	
-		return card;
+	public String getRank() {
+		return this.rank;
+	}
+	@Override
+	public String toString() {
+		return rank + " of " + suit;
 	}
 }
