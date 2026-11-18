@@ -10,6 +10,7 @@ public class Deck {
 		size = 0;
 		currentCard = 0;
 	}
+	
 	public void shuffleDeck() {
 		int index = 1;
 		Random rand = new Random();
@@ -129,8 +130,14 @@ public class Deck {
 			System.out.println(cards[i]);
 		}
 	}
-	public void dealCard() {
+	public Card dealCard() {
+		if(currentCard > 312) {
+			shuffleDeck();
+			currentCard = 0;
+		}
+		Card card = cards[currentCard];
 		currentCard++;
-		System.out.println(cards[currentCard++]);
+		
+		return card;
 	}
 }

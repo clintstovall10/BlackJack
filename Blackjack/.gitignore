@@ -2,3 +2,6 @@
 /Card.class
 /Suit.class
 /Deck.class
+/Game.class
+/Player.class
+/Dealer.class
