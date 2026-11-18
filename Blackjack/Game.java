@@ -5,6 +5,7 @@ public class Game {
 	Player player1;
 	Dealer dealer;
 	
+	
 	public Game () {
 		this.deck = new Deck();
 		this.card = new Card();
