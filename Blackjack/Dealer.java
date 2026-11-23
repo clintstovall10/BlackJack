@@ -53,9 +53,13 @@ public class Dealer {
 	
 	public int getVisibleHand() {
 		int total = 0;
-		if(card[0].getValue()>= 10) {
+		if(card[0].getRank().equals("Ace")) {
+			total+=11;
+		}
+		else if(card[0].getValue()>= 10) {
 			total+=10;
-		}else {
+		}
+		else {
 			total+=card[0].getValue();
 		}
 		
