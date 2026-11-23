@@ -20,10 +20,21 @@ public class Game {
 		//hit or stand?
 		deck.buildDeck();
 		deck.shuffleDeck();
-		dealer.setCard(deck.dealCard());
-		player1.setCard(deck.dealCard());
-		System.out.printf("Dealer card: %s\n" , dealer.getCard());
-		System.out.printf("Player card: %s\n" , player1.getCard());
+		
+		dealer.addCard(deck.dealCard());
+		player1.addCard(deck.dealCard());
+		
+		dealer.addCard(deck.dealCard());
+		player1.addCard(deck.dealCard());
+		
+		dealer.printHand();
+		System.out.println("Dealers Visible Total: " + dealer.getVisibleHand());
+		//System.out.println("Dealers Total: " + dealer.getHandValue());
+		System.out.println();
+		player1.printHand();
+		System.out.println("Players Total: " + player1.getHandValue());
+		
+		
 		
 	}
 }

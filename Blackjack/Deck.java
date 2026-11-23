@@ -131,7 +131,7 @@ public class Deck {
 		}
 	}
 	public Card dealCard() {
-		if(currentCard > 312) {
+		if(currentCard >= 312) {
 			shuffleDeck();
 			currentCard = 0;
 		}
