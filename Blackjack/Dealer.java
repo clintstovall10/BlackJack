@@ -10,7 +10,7 @@ public class Dealer {
 		this.card[size] = card;
 		size++;
 	}
-	public void printHand() {
+	public void printVisibleHand() {
 		int i;
 		System.out.println("Dealers cards:");
 		for (i = 0; i < size; i++) {
@@ -65,6 +65,12 @@ public class Dealer {
 		
 		return total;
 	}
-	
+	public void printHand() {
+		int i;
+		System.out.println("Dealers cards:");
+		for (i = 0; i < size; i++) {
+			System.out.println(card[i]);
+		}
+	}
 	
 }

@@ -2,6 +2,7 @@
 public class Player {
 	private Card [] card;
 	private int size;
+	
 	public Player () {
 		card = new Card[20];
 		size = 0;
@@ -46,5 +47,7 @@ public class Player {
 		
 		return total;
 	}
+	
+	
 	
 }

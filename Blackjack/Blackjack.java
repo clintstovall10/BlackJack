@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Blackjack {
 
 	public static void main(String[] args) {
-		Game game = new Game();
-		game.startGame();
-		
+		new BlackjackGUI();
 		
 	}
 	
