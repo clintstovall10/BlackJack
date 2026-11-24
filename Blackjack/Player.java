@@ -11,6 +11,9 @@ public class Player {
 		this.card[size] = card;
 		size++;
 	}
+	public Card getCard(int index) {
+		return card[index];
+	}
 	public void printHand() {
 		int i;
 		System.out.println("Players cards:");

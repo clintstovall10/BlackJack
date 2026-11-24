@@ -13,12 +13,7 @@ public class Game {
 		this.player1 = new Player();
 		this.dealer = new Dealer();
 	}
-	public void startGame() {
-		boolean playerTurn = true;
-		boolean blackjack = false;
-		Scanner scan = new Scanner(System.in);
-		String userInput;
-		
+	public void initialDeal() {
 		deck.buildDeck();
 		deck.shuffleDeck();
 		
@@ -27,6 +22,12 @@ public class Game {
 		
 		dealer.addCard(deck.dealCard());
 		player1.addCard(deck.dealCard());
+	}
+	public void startGame() {
+		boolean playerTurn = true;
+		boolean blackjack = false;
+		Scanner scan = new Scanner(System.in);
+		String userInput;
 		
 		dealer.printVisibleHand();
 		System.out.println("Dealers Visible Total: " + dealer.getVisibleHand());

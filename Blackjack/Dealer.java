@@ -10,6 +10,9 @@ public class Dealer {
 		this.card[size] = card;
 		size++;
 	}
+	public Card getCard(int index) {
+		return card[index];
+	}
 	public void printVisibleHand() {
 		int i;
 		System.out.println("Dealers cards:");
